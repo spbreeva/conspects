@@ -1,0 +1,25 @@
+number = int(input())
+index1 = int(input()) 
+index2 = int(input())
+digit = input()
+if index1 == 0 and index2 == 0:
+  digit2 = digit[:]
+elif index1 == 0:
+  digit2 = digit[:index2]
+elif index2 == 0: 
+  digit2 = digit[:index1]
+elif index1 > index2:
+  digit2 = digit[index1:index2]
+else: 
+  digit2 = digit[index2:index1]
+counter_true = 0
+for i in range(len(digit2)):
+  if int(digit2[i]) == number:
+    counter_true += 1 
+  i += 1 
+
+if counter_true > 0:
+  print('True')
+else:
+  print('False')
+  
